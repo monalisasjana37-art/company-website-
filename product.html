@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product | Monalisa Electro Make</title>
+    <meta name="description" content="Product details and specifications from Monalisa Electro Make.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="index.html" aria-label="Monalisa Electro Make home">
+                <img src="logo.jpg" alt="Monalisa Electro Make" class="brand__logo">
+                <span class="brand__name">Monalisa Electro Make</span>
+            </a>
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+            <nav class="site-nav" aria-label="Main">
+                <a href="index.html">Home</a>
+                <a href="products.html" aria-current="page">Products</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a class="btn btn--volt btn--small" href="contact.html">Get a quote</a>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="section">
+            <div class="wrap" id="product-detail">
+                <!-- filled by js/main.js using js/products-data.js -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap site-footer__inner">
+            <div>
+                <p class="site-footer__name">Monalisa Electro Make</p>
+                <p>Plot 12, Industrial Area<br>Nagpur, Maharashtra</p>
+                <p><a href="tel:+910000000000">+91 8367819478</a><br><a
+                        href="mailto:info@monalisa-electromake.example">info@monalisa-electromake.example</a></p>
+            </div>
+            <nav>
+                <p class="site-footer__head">Company</p>
+                <a href="about.html">About us</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <nav>
+                <p class="site-footer__head">Products</p>
+                <a href="product.html?id=bus-bar">Bus bar</a>
+                <a href="product.html?id=cable-box">Cable box</a>
+                <a href="product.html?id=transformer-box">Transformer box</a>
+                <a href="product.html?id=light-lamp">Light / lamp</a>
+            </nav>
+            <div>
+                <p class="site-footer__head">Hours</p>
+                <p>Monday to Saturday, 9:30 to 18:30</p>
+            </div>
+        </div>
+        <div class="wrap site-footer__legal">
+            <p>&copy; <span id="year">2026</span> Monalisa Electro Make. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/products-data.js"></script>
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>

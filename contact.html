@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | Monalisa Electro Make</title>
+    <meta name="description" content="Request a product quote or a project site visit from Monalisa Electro Make.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="index.html" aria-label="Monalisa Electro Make home">
+                <img src="logo.jpg" alt="Monalisa Electro Make" class="brand__logo">
+                <span class="brand__name">Monalisa Electro Make</span>
+            </a>
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+            <nav class="site-nav" aria-label="Main">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" aria-current="page">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="section">
+            <div class="wrap">
+                <div class="section__head">
+                    <div>
+                        <h1 class="section__title">Get in touch</h1>
+                        <p class="section__lead">Use the Product Quote form for an item you want to order, and the
+                            Project Enquiry form for site work like hotel or office electrical installation.</p>
+                    </div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Product Quote -->
+                    <div class="card">
+                        <h2>Request a product quote</h2>
+                        <p class="form-sub">Bus bar, cable box, transformer box, lighting or a custom item.</p>
+                        <form id="product-quote-form" novalidate>
+                            <div class="field">
+                                <label for="pq-name">Your name</label>
+                                <input id="pq-name" name="name" type="text" autocomplete="name" required
+                                    aria-describedby="pq-name-error">
+                                <p class="field__error" id="pq-name-error"></p>
+                            </div>
+                            <div class="field-row">
+                                <div class="field">
+                                    <label for="pq-company">Company <span class="optional">Optional</span></label>
+                                    <input id="pq-company" name="company" type="text" autocomplete="organization">
+                                </div>
+                                <div class="field">
+                                    <label for="pq-phone">Phone number</label>
+                                    <input id="pq-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel"
+                                        required aria-describedby="pq-phone-error">
+                                    <p class="field__error" id="pq-phone-error"></p>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="pq-email">Email <span class="optional">Optional</span></label>
+                                <input id="pq-email" name="email" type="email" autocomplete="email"
+                                    aria-describedby="pq-email-error">
+                                <p class="field__error" id="pq-email-error"></p>
+                            </div>
+                            <div class="field-row">
+                                <div class="field">
+                                    <label for="pq-category">Product category</label>
+                                    <select id="pq-category" name="productCategory">
+                                        <option value="bus-bar">Bus bar</option>
+                                        <option value="cable-box">Cable box</option>
+                                        <option value="transformer-box">Transformer box</option>
+                                        <option value="light-lamp">Light / lamp</option>
+                                        <option value="other">Something else</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="pq-quantity">Quantity</label>
+                                    <input id="pq-quantity" name="quantity" type="text" placeholder="e.g. 50 units">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="pq-productName">Product name <span class="optional">Optional</span></label>
+                                <input id="pq-productName" name="productName" type="text"
+                                    placeholder="e.g. Aluminium bus bar">
+                            </div>
+                            <div class="field">
+                                <label for="pq-spec">Specification or requirement</label>
+                                <textarea id="pq-spec" name="specification" rows="4" maxlength="2000"
+                                    placeholder="Size, rating, finish, drawing reference etc."></textarea>
+                            </div>
+                            <div class="hp" aria-hidden="true">
+                                <label for="pq-website">Leave this empty</label>
+                                <input id="pq-website" name="website" type="text" tabindex="-1" autocomplete="off">
+                            </div>
+                            <button class="btn btn--volt btn--block" type="submit" id="product-quote-submit">Request a
+                                quote</button>
+                            <p class="form-status" id="product-quote-status" role="status"></p>
+                            <p class="fineprint">We only use your details to respond to this request.</p>
+                        </form>
+                        <div class="success" id="product-quote-success" tabindex="-1" hidden>
+                            <p class="success__title">Request received</p>
+                            <p id="product-quote-success-text"></p>
+                            <p class="success__ref" id="product-quote-success-ref"></p>
+                        </div>
+                    </div>
+
+                    <!-- Project Enquiry -->
+                    <div class="card">
+                        <h2>Request a project site visit</h2>
+                        <p class="form-sub">Full electrical or lighting work for a hotel, office, factory or other site.
+                        </p>
+                        <form id="project-form" novalidate>
+                            <div class="field">
+                                <label for="pr-name">Your name</label>
+                                <input id="pr-name" name="name" type="text" autocomplete="name" required
+                                    aria-describedby="pr-name-error">
+                                <p class="field__error" id="pr-name-error"></p>
+                            </div>
+                            <div class="field-row">
+                                <div class="field">
+                                    <label for="pr-company">Company <span class="optional">Optional</span></label>
+                                    <input id="pr-company" name="company" type="text" autocomplete="organization">
+                                </div>
+                                <div class="field">
+                                    <label for="pr-phone">Phone number</label>
+                                    <input id="pr-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel"
+                                        required aria-describedby="pr-phone-error">
+                                    <p class="field__error" id="pr-phone-error"></p>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="pr-email">Email <span class="optional">Optional</span></label>
+                                <input id="pr-email" name="email" type="email" autocomplete="email"
+                                    aria-describedby="pr-email-error">
+                                <p class="field__error" id="pr-email-error"></p>
+                            </div>
+                            <div class="field">
+                                <label for="pr-location">Site location</label>
+                                <input id="pr-location" name="siteLocation" type="text" placeholder="City / area">
+                            </div>
+                            <div class="field-row">
+                                <div class="field">
+                                    <label for="pr-type">Type of site</label>
+                                    <select id="pr-type" name="projectType">
+                                        <option value="hotel">Hotel</option>
+                                        <option value="office">Office / commercial</option>
+                                        <option value="factory">Factory / industrial</option>
+                                        <option value="retail">Retail / showroom</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="pr-timeline">When do you want to start?</label>
+                                    <select id="pr-timeline" name="timeline">
+                                        <option value="now">As soon as possible</option>
+                                        <option value="1-3-months">In 1 to 3 months</option>
+                                        <option value="3-plus-months">In 3 months or more</option>
+                                        <option value="planning">Still planning</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="pr-scope">Tell us about the project</label>
+                                <textarea id="pr-scope" name="scope" rows="4" maxlength="2000"
+                                    placeholder="Area, scope of work, anything we should know"></textarea>
+                            </div>
+                            <div class="hp" aria-hidden="true">
+                                <label for="pr-website">Leave this empty</label>
+                                <input id="pr-website" name="website" type="text" tabindex="-1" autocomplete="off">
+                            </div>
+                            <button class="btn btn--volt btn--block" type="submit" id="project-submit">Request a site
+                                visit</button>
+                            <p class="form-status" id="project-status" role="status"></p>
+                            <p class="fineprint">We only use your details to respond to this request.</p>
+                        </form>
+                        <div class="success" id="project-success" tabindex="-1" hidden>
+                            <p class="success__title">Project request received</p>
+                            <p id="project-success-text"></p>
+                            <p class="success__ref" id="project-success-ref"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap site-footer__inner">
+            <div>
+                <p class="site-footer__name">Monalisa Electro Make</p>
+                <p>Plot 12, Industrial Area<br>Nagpur, Maharashtra</p>
+                <p><a href="tel:+910000000000">+91 8367819478</a><br><a
+                        href="mailto:info@monalisa-electromake.example">info@monalisa-electromake.example</a></p>
+            </div>
+            <nav>
+                <p class="site-footer__head">Company</p>
+                <a href="about.html">About us</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <nav>
+                <p class="site-footer__head">Products</p>
+                <a href="product.html?id=bus-bar">Bus bar</a>
+                <a href="product.html?id=cable-box">Cable box</a>
+                <a href="product.html?id=transformer-box">Transformer box</a>
+                <a href="product.html?id=light-lamp">Light / lamp</a>
+            </nav>
+            <div>
+                <p class="site-footer__head">Hours</p>
+                <p>Monday to Saturday, 9:30 to 18:30</p>
+            </div>
+        </div>
+        <div class="wrap site-footer__legal">
+            <p>&copy; <span id="year">2026</span> Monalisa Electro Make. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>
